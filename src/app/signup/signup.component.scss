@@ -1,0 +1,83 @@
+$c1: #009fff;
+$c2: red;
+
+.signuppage {
+  width: 500px;
+  margin: 50px auto;
+
+  padding: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(238, 238, 238);
+}
+form {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    .fas {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      color: $c1;
+      right: 0;
+    }
+    .fa-times-circle {
+      color: $c2;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      accent-color: $c1;
+    }
+    input[type="checkbox"] ~ small {
+      margin: 0 0 0 5px;
+      font-size: 13px;
+    }
+    input {
+      width: 300px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 2px solid $c1;
+    }
+
+    button {
+      font-weight: bold;
+      color: #fff;
+      width: 300px;
+      border: none;
+      border-radius: 0;
+      background-color: $c1;
+      margin: 10px 0 0 0;
+    }
+
+    .loginbtn2 {
+      color: $c1;
+      font-weight: bold;
+      border: 2px solid $c1;
+      background-color: transparent;
+    }
+    .input_invaild {
+      &::placeholder {
+        color: $c2;
+      }
+      border-bottom: 4px solid $c2 !important;
+    }
+    .input_valid {
+      border-bottom: 4px solid $c1 !important;
+    }
+    .errors {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}

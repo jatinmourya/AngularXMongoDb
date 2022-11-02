@@ -1,0 +1,21 @@
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      font-weight: 400;
+      margin: 0 10px;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Login</h1>
+  <form [formGroup]="LoginFormDetail" (ngSubmit)="sendLoginForm(LoginFormDetail.value)">
+    <p>
+      <input type="text" autocomplete="username" placeholder="Email or Mobile" class="form-control"
+        formControlName="username" [class.input_invalid]="
+          LoginFormDetail.get('username')?.invalid &&
+          LoginFormDetail.get('username')?.touched
+        " [class.input_valid]="LoginFormDetail.get('username')?.valid" />
+      <i *ngIf="LoginFormDetail.get('username')?.valid" class="fas fa-check-circle"></i>
+      <i *ngIf="
+          LoginFormDetail.get('username')?.invalid &&
+          LoginFormDetail.get('username')?.touched
+        " class="fas fa-times-circle"></i>
+    </p>
+    <p>
+      <input type="password" autocomplete="current-password" placeholder="Password" class="form-control"
+        formControlName="password" [class.input_invalid]="
+          LoginFormDetail.get('password')?.invalid &&
+          LoginFormDetail.get('password')?.touched 
+        " [class.input_valid]="LoginFormDetail.get('password')?.valid" />
+      <i *ngIf="LoginFormDetail.get('password')?.valid" class="fas fa-check-circle"></i>
+      <i *ngIf="
+          LoginFormDetail.get('password')?.invalid &&
+          LoginFormDetail.get('password')?.touched
+        " class="fas fa-times-circle"></i>
+    </p>
+    <p><input type="checkbox" name="rememberme" formControlName="rememberme" /><small>remember me</small></p>
+    <p>
+      <button class="btn loginbtn" type="submit" [class.disabled]="
+          LoginFormDetail.get('username')?.invalid ||
+          LoginFormDetail.get('password')?.invalid
+        ">
+        Log In
+      </button>
+    </p>
+    <p class="user-select-none">
+      Don't have account?<a class="mx-2 text-decoration-none" routerLink="/signup">Create One</a>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<nav>
+  <ul class="">
+    <li routerLink="/" class="h4">Home</li>
+    <ng-container *ngIf="myservice.isLoggedIn;">
+
+      <li (click)="logOut()" class="h4">Logout</li>
+    </ng-container>
+    <ng-container *ngIf="!myservice.isLoggedIn;">
+      <li routerLink="/login" class="h4">Login</li>
+      <li routerLink="/signup" class="h4">Sign Up</li>
+    </ng-container>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
