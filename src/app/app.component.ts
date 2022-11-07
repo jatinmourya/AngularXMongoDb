@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyServiceService } from './my-service.service';
-// import { SocialAuthService } from '@abacritt/angularx-social-login';
-// import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,10 +8,7 @@ import { MyServiceService } from './my-service.service';
 })
 export class AppComponent {
   title = 'Angular X MongoDb';
-  constructor(
-    public myservice: MyServiceService,
-    private router: Router // private authService: SocialAuthService
-  ) {}
+  constructor(public myservice: MyServiceService, private router: Router) {}
 
   logOut() {
     this.myservice.isLoggedIn = false;
@@ -39,6 +34,9 @@ export class AppComponent {
   userDetailArray: any;
 }
 
+// import { SocialAuthService } from '@abacritt/angularx-social-login';
+// import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+// private authService: SocialAuthService 
 // user: any;
 // loggedIn: any;
 // ngOnInit() {

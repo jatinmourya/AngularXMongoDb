@@ -17,6 +17,7 @@ export class MyServiceService {
   postData(form: any) {
     return this.http.post('http://localhost:3000/addUser', form);
   }
+
   loginUser(form: any) {
     return this.http.post('http://localhost:3000/login', form);
   }

@@ -124,6 +124,7 @@ async function main_app() {
       // console.log(doc);
       if (doc == null) {
         obj = { name, _username, email, password };
+        // obj = req.body;
         var data = new myTable(obj);
         data.save();
         res.json({
