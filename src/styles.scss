@@ -5,3 +5,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+* {
+  box-sizing: border-box;
+}
