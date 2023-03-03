@@ -16,7 +16,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 url = "mongodb://localhost:27017/";
 // url =
-  // "mongodb+srv://jatinmourya:jatinmourya@cluster0.tattcnd.mongodb.net/?retryWrites=true&w=majority";
+// "mongodb+srv://jatinmourya:jatinmourya@cluster0.tattcnd.mongodb.net/?retryWrites=true&w=majority";
 
 // connectURL = `${url}/${dbName}`;
 mongoose.connect(url, {
